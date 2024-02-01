@@ -13,6 +13,9 @@ public class Produto {
     private String descricao;
     private double precoUnitario;
     private int quantidade;
+    
+
+    
 
 
 }
