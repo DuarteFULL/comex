@@ -13,6 +13,18 @@ public class Produto {
     private double precoUnitario;
     private int quantidade;
 
+    
+    
+    @Override
+    public String toString() {
+        return "Produto [nome=" + nome + ", descricao=" + descricao + ", precoUnitario=R$" + precoUnitario
+                + ", quantidade=" + quantidade + "]";
+    }
+
+    public Produto(String nome) {
+        this.nome = nome;
+    }
+
     public String getNome() {
         return nome;
     }

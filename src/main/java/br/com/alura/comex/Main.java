@@ -17,8 +17,26 @@ public class Main {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         
-        Produto produto1 = new Produto();
+        // Cria uma classe para efetuar a instanciação (Objeto) para manipular suas informações e apresente suas propriedades no console da sua IDE.
         
+        Produto produto1 = new Produto("Produto10");
+        Produto produto2 = new Produto("Produto10");
+        Util util = new Util();
+
+        System.out.println("*******************************");
+        System.out.println("Imprime o objeto produto1");
+        System.out.println(produto1.toString());
+        System.out.println("*******************************");
+        // util.equals(produto1,produto2);
+        System.out.println("*******************************");
+        System.out.println("Compara o nome dos objetos produto1 e produto2");
+        System.out.print("produto1 e produto2 tem nomes: ");
+        if (util.equals(produto1,produto2)) {
+            System.out.println("Iguais");
+        } else System.out.println("Diferentes");
+        System.out.println("*******************************");
+
+        System.out.println("Fim do programa");
         
         // Linhas abaixo comentadas pois não sei do que se trata.
         // Pedido[] pedidos = ProcessadorDeCsv.processaArquivo("pedidos.csv");
