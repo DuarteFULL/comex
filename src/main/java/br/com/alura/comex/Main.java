@@ -7,9 +7,14 @@ import java.io.IOException;
 //import java.math.BigDecimal;
 //import java.math.RoundingMode;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
 //import java.text.NumberFormat;
 //import java.util.Arrays;
 //import java.util.Locale;
+import java.util.Scanner;
+
+import org.apache.commons.collections.functors.WhileClosure;
 
 public class Main {
 
@@ -18,9 +23,9 @@ public class Main {
     public static void main(String[] args) throws IOException, URISyntaxException {
         
         // Cria uma classe para efetuar a instanciação (Objeto) para manipular suas informações e apresente suas propriedades no console da sua IDE.
-        
+            
         Produto produto1 = new Produto("Produto10");
-        Produto produto2 = new Produto("Produto10");
+        Produto produto2 = new Produto("Produto20");
         Util util = new Util();
 
         System.out.println("*******************************");
@@ -60,14 +65,76 @@ public class Main {
         
         System.out.println("*******************************");
         System.out.println("Imprime o objeto cliente1 com seu endereço: ");
-        System.err.println(cliente1);
+        System.out.println(cliente1);
+        System.out.println("*******************************");
+        System.out.println();
+        System.out.println();
+
+
+        // Exercício 7
+        // Criar a obrigatoriedade na criação do Produto para que o usuário da aplicação forneça um nome.
+        System.out.print("Entre com o nome do produto: ");
+        Scanner entrada = new Scanner(System.in);
+        String valor = entrada.nextLine();
+        Produto produto3 = new Produto(valor);
+        System.out.println("*******************************");
+        System.out.println("Imprime o objeto produto3: ");
+        System.out.println(produto3.toString());
         System.out.println("*******************************");
 
 
+        // Exercicio 8
+        // Crie uma classe de teste que instancie uma ListaDeDesejos e adicione alguns
+        // produtos nela. Depois exiba a lista de desejos com o método imprimeProdutos.
+        ListaDeDesejos desejos = new ListaDeDesejos();
+        System.out.println("*******************************");
+        System.out.println("Vamos montar nossa lista de desejos.");
+        System.out.println();
+        System.out.print("Digite o nome do primeiro produto desejado: ");
+        int resposta = 1;
+        int i = 1;
+        Scanner leitura = new Scanner(System.in);
+        String nomeDesejo = leitura.nextLine();
+        ArrayList<Produto> listaDeProdutos = new ArrayList<>();
+        listaDeProdutos.add(new Produto(nomeDesejo));
+        //System.out.println(produto3.getNome());
+        System.err.println();
+        System.out.print("Digite 1 para continuar ou 2 para sair do cadastro: ");
+        resposta = leitura.nextInt();        
+        // listaDeProdutos.add(produto1);
+        // listaDeProdutos.add(produto2);
+        // listaDeProdutos.add(produto3);
+        //System.out.println(listaDeProdutos);
+
+        while (resposta == 1) {
+           i++;
+           System.out.print("Digite o nome do próximo produto desejado: ");
+           nomeDesejo = leitura.next();
+           listaDeProdutos.add(new Produto(nomeDesejo));
+           System.err.println();
+           System.out.print("Digite 1 para continuar ou 2 para sair do cadastro: ");
+           leitura = new Scanner(System.in);
+           resposta = leitura.nextInt();  
+        }
+
+        System.err.println();
+        System.out.println("*******************************");
+        System.out.println("Você encerrou o cadastro com um total de "+i+" produtos em sua lista.");
+        System.out.println("*******************************");
+
+        System.err.println();
+        System.out.println("*******************************");
+        System.out.println("Imprime o ArrayList listaDeProdutos: ");
+        System.out.println("*******************************");
+        System.out.println(listaDeProdutos);
+        leitura.close();
+        //desejos.imprimeProdutos;
+        
 
 
-
+        System.out.println("*******************************");
         System.out.println("Fim do programa");
+        System.out.println("*******************************");
         
         // Linhas abaixo comentadas pois não sei do que se trata.
         // Pedido[] pedidos = ProcessadorDeCsv.processaArquivo("pedidos.csv");
