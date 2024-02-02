@@ -36,6 +36,37 @@ public class Main {
         } else System.out.println("Diferentes");
         System.out.println("*******************************");
 
+
+        // Exercicio 4
+        produto1.imprimirProduto();
+
+        // Exercício 5
+        // Crie uma classe de teste para efetuar a criação desse objetos e criar a
+        // associação entre eles.
+        Cliente cliente1 = new Cliente();
+        Endereco endereco1 = new Endereco();
+
+        cliente1.setCPF("123.456.789-10");
+        cliente1.setNome("Cliente Nome UM");
+        cliente1.setEmail("cliente@gmail.com");
+        cliente1.setProfissao("Desenvolvedor");
+        cliente1.setTelefone("+55 11 3303 1121");
+        endereco1.setBairro("Centro");
+        endereco1.setCidade("São Paulo");
+        endereco1.setEstado("SP");
+        endereco1.setRua("Rua da Consolação");
+        endereco1.setNumero(1122);;
+        cliente1.setEndereco(endereco1);
+        
+        System.out.println("*******************************");
+        System.out.println("Imprime o objeto cliente1 com seu endereço: ");
+        System.err.println(cliente1);
+        System.out.println("*******************************");
+
+
+
+
+
         System.out.println("Fim do programa");
         
         // Linhas abaixo comentadas pois não sei do que se trata.
