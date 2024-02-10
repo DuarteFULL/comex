@@ -88,34 +88,47 @@ public class Main {
         // produtos nela. Depois exiba a lista de desejos com o método imprimeProdutos.
         ListaDeDesejos desejos = new ListaDeDesejos();
         System.out.println("*******************************");
+        System.out.println("*******************************");
         System.out.println("Vamos montar nossa lista de desejos.");
-        System.out.println();
-        System.out.print("Digite o nome do primeiro produto desejado: ");
-        int resposta = 1;
-        int i = 1;
-        Scanner leitura = new Scanner(System.in);
-        String nomeDesejo = leitura.nextLine();
-        ArrayList<Produto> listaDeProdutos = new ArrayList<>();
-        listaDeProdutos.add(new Produto(nomeDesejo));
-        //System.out.println(produto3.getNome());
-        System.err.println();
-        System.out.print("Digite 1 para continuar ou 2 para sair do cadastro: ");
-        resposta = leitura.nextInt();        
-        // listaDeProdutos.add(produto1);
-        // listaDeProdutos.add(produto2);
-        // listaDeProdutos.add(produto3);
-        //System.out.println(listaDeProdutos);
+        System.out.println("Tarefa4-Semana5 Le e trata erros.");
+       
+        System.out.println();       
+        
 
-        while (resposta == 1) {
-           i++;
-           System.out.print("Digite o nome do próximo produto desejado: ");
-           nomeDesejo = leitura.next();
-           listaDeProdutos.add(new Produto(nomeDesejo));
-           System.err.println();
-           System.out.print("Digite 1 para continuar ou 2 para sair do cadastro: ");
-           leitura = new Scanner(System.in);
-           resposta = leitura.nextInt();  
-        }
+        //Tarefa4-Semana5 lendo do teclado e tratando erros.
+        boolean feito = false;
+        boolean continuar = true;
+        int i = 0;
+        ArrayList<Produto> listaDeProdutos = new ArrayList<>();
+        Scanner leitura = new Scanner(System.in);
+        
+        while (continuar) {   
+            i++;
+            System.out.println();             
+            System.out.print("Digite o nome do produto desejado nº "+i+": ");
+            //Scanner leitura = new Scanner(System.in);
+            listaDeProdutos.add(new Produto(leitura.nextLine()));
+            System.out.println(i+"º produto adicionado: "+listaDeProdutos.get(i-1).getNome());
+            feito = false;
+            while (!feito) {
+                try {
+                    System.out.println();
+                    System.out.print("Selecione sua opção: \n1-Continuar \n2-Encerrar \nResposta: ");                    
+                    Scanner leOpcao = new Scanner(System.in);
+                    if (leOpcao.nextInt() == 2){
+                        continuar = false;
+                    }
+                    feito = true;                    
+                } catch (Exception e) {
+                    System.out.println("Erro ao ler código, por favor informe a opção correta.");
+                } 
+            } 
+            
+        } 
+        leitura.close();
+
+        
+        
 
         System.out.println();
         System.out.println("*******************************");
@@ -127,14 +140,13 @@ public class Main {
         System.out.println("Imprime o ArrayList listaDeProdutos: ");
         System.out.println("*******************************");
         System.out.println(listaDeProdutos);
-        leitura.close();
         //desejos.imprimeProdutos;
 
 
-        //Imprime objetos identificaveis / Tarefa 3 Semana-5
+        //Imprime objetos identificaveis / Tarefa3 Semana-5
         System.out.println();
         System.out.println("*******************************");
-        System.out.println("Imprime o objeto Cliente identificavel: ");
+        System.out.println("Tarefa3-Semana5 Imprime o objeto Cliente identificavel: ");
         System.out.println("*******************************");
 
 
