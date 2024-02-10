@@ -117,18 +117,30 @@ public class Main {
            resposta = leitura.nextInt();  
         }
 
-        System.err.println();
+        System.out.println();
         System.out.println("*******************************");
         System.out.println("Você encerrou o cadastro com um total de "+i+" produtos em sua lista.");
         System.out.println("*******************************");
 
-        System.err.println();
+        System.out.println();
         System.out.println("*******************************");
         System.out.println("Imprime o ArrayList listaDeProdutos: ");
         System.out.println("*******************************");
         System.out.println(listaDeProdutos);
         leitura.close();
         //desejos.imprimeProdutos;
+
+
+        //Imprime objetos identificaveis / Tarefa 3 Semana-5
+        System.out.println();
+        System.out.println("*******************************");
+        System.out.println("Imprime o objeto Cliente identificavel: ");
+        System.out.println("*******************************");
+
+
+        System.out.println(cliente1.getIdentificacao());
+
+
         
 
 

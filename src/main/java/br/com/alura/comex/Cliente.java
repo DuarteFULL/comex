@@ -1,6 +1,6 @@
 package br.com.alura.comex;
 
-public class Cliente {
+public class Cliente implements identificavel {
 
     // Crie a classe Cliente com seus respectivos atributos:
 
@@ -65,6 +65,18 @@ public class Cliente {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+    
+    //TAREFA:
+    //A Classe Cliente e Classe Livro devem implementar um método Identificar de forma obrigatória 
+    //(cada uma classe implementa de uma forma diferente).
+    //Classe Cliente deve retornar uma String com NOME e CPF;    
+    @Override
+    public String getIdentificacao() {
+        return "Essa é a identificação: Nome " + this.getNome() + " e CPF " + this.getCPF();
+    }
+
+
+   
 
     
 
