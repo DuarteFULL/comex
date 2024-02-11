@@ -29,6 +29,16 @@ public class Produto {
     private int quantidade;
 
 
+    public Produto(String nome) {
+        this.nome = nome;
+    }
+
+    public Produto(RecordTitulo tituloAPI) {
+        this.nome = tituloAPI.title();
+        this.descricao = tituloAPI.description();
+        this.precoUnitario = tituloAPI.price();
+    }
+
     public void imprimirProduto(){
         System.out.println(">> Dados do produto:");
         System.out.println();
@@ -40,10 +50,6 @@ public class Produto {
     public String toString() {
         return "Produto [nome=" + nome + ", descricao=" + descricao + ", precoUnitario=R$" + precoUnitario
                 + ", quantidade=" + quantidade + "]";
-    }
-
-    public Produto(String nome) {
-        this.nome = nome;
     }
 
     public String getNome() {

@@ -35,6 +35,13 @@ public class TesteAPIDinamica {
         System.out.println("******************************************************************");
         System.out.println(response.body());
         System.out.println("******************************************************************");
+
+
+    //TAREFA8-semana5
+    //A partir do resultado do nosso resultado da consulta API externa devemos desserializar o JSON de retorno em um Objeto do JAVA.
+    //OBS: Podemos criar uma Estrutura do Tipo Record inicialmente e converter o resultado da consulta para esse tipo e depois imprimir em uma classe teste.
+
+    
     }
 
 
