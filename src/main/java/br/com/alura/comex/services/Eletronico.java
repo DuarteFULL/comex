@@ -1,4 +1,4 @@
-package br.com.alura.comex;
+package br.com.alura.comex.services;
 
 public class Eletronico extends Produto {
 

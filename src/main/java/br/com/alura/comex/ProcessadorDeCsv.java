@@ -10,6 +10,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import br.com.alura.comex.services.Pedido;
+
 public class ProcessadorDeCsv {
 
     public static Pedido[] processaArquivo(String nomeDoArquivo) {

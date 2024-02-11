@@ -8,13 +8,18 @@ import java.io.IOException;
 //import java.math.RoundingMode;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.List;
+//import java.util.List;
 //import java.text.NumberFormat;
 //import java.util.Arrays;
 //import java.util.Locale;
 import java.util.Scanner;
 
-import org.apache.commons.collections.functors.WhileClosure;
+//import org.apache.commons.collections.functors.WhileClosure;
+
+import br.com.alura.comex.services.Cliente;
+import br.com.alura.comex.services.Endereco;
+import br.com.alura.comex.services.ListaDeDesejos;
+import br.com.alura.comex.services.Produto;
 
 public class Main {
 

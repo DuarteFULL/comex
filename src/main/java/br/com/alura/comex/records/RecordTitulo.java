@@ -1,4 +1,4 @@
-package br.com.alura.comex;
+package br.com.alura.comex.records;
 
 public record RecordTitulo(String title, String description, double price) {
     //TAREFA8-semana5

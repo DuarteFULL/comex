@@ -1,4 +1,4 @@
-package br.com.alura.comex;
+package br.com.alura.comex.API;
 
 import java.io.IOException;
 import java.net.URI;
@@ -10,6 +10,9 @@ import java.util.Scanner;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import br.com.alura.comex.records.RecordTitulo;
+import br.com.alura.comex.services.Produto;
 
 public class TesteAPIGSON {
 

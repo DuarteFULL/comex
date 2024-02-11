@@ -1,4 +1,4 @@
-package br.com.alura.comex;
+package br.com.alura.comex.API;
 
 import java.io.IOException;
 import java.net.URI;

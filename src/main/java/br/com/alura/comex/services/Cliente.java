@@ -1,4 +1,6 @@
-package br.com.alura.comex;
+package br.com.alura.comex.services;
+
+import br.com.alura.comex.interfaces.identificavel;
 
 public class Cliente implements identificavel {
 

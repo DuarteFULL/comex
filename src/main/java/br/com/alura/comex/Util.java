@@ -1,5 +1,7 @@
 package br.com.alura.comex;
 
+import br.com.alura.comex.services.Produto;
+
 public class Util {
 
     /*Tarefa    

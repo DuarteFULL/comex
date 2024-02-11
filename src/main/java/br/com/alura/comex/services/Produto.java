@@ -1,4 +1,6 @@
-package br.com.alura.comex;
+package br.com.alura.comex.services;
+
+import br.com.alura.comex.records.RecordTitulo;
 
 public class Produto {
     // Cria a classe Produto com seus respectivos atributos:
